@@ -8,5 +8,14 @@ module.exports = function(app){
    .put(users.update)
    .delete(users.delete);
 
+  /// Finding users by Username
+  app.route("/usernames/:userName")
+    .get(users.read)
+    .put(users.update)
+    .delete(users.delete);
+
+
+
   app.param('userId', users.userById);
+  app.param("userName", users.userByUsername);
 };
