@@ -9,7 +9,7 @@ module.exports = function(app){
    .delete(users.delete);
 
   /// Finding users by Username
-  app.route("/usernames/:userName")
+  app.routes("/usernames/:userName")
     .get(users.read)
     .put(users.update)
     .delete(users.delete);
